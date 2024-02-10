@@ -166,3 +166,4 @@ cython_debug/
 filelists/*
 !/filelists/esd.list
 data/*
+bert/bert-base-japanese-v3/bert-base-japanese-v3/pytorch_model.bin
