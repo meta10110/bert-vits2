@@ -21,7 +21,7 @@ def process_line(line):
     word2ph = [i for i in word2ph]
     phone, tone, language = cleaned_text_to_sequence(phone, tone, language_str)
 
-    if hps.data.add_blank:
+    if True:                                                          # 直接修改为 True
         phone = commons.intersperse(phone, 0)
         tone = commons.intersperse(tone, 0)
         language = commons.intersperse(language, 0)
@@ -43,7 +43,7 @@ def process_line(line):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--config", type=str, default="configs/config.json")
-    parser.add_argument("--num_processes", type=int, default=2)
+    parser.add_argument("--num_processes", type=int, default=4)        # 修改默认值为 4
     args = parser.parse_args()
     config_path = args.config
     hps = utils.get_hparams_from_file(config_path)

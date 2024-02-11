@@ -542,7 +542,7 @@ def distribute_phone(n_phone, n_word):
     return phones_per_word
 
 
-tokenizer = AutoTokenizer.from_pretrained("./bert/bert-base-japanese-v3")
+tokenizer = AutoTokenizer.from_pretrained("E:\1-AIGC_speech_studio\Bert-VITS2\BERT-VITS2-V1.1\bert\bert-base-japanese-v3")
 
 
 def g2p(norm_text):
@@ -574,7 +574,7 @@ def g2p(norm_text):
 
 
 if __name__ == "__main__":
-    tokenizer = AutoTokenizer.from_pretrained("./bert/bert-base-japanese-v3")
+    tokenizer = AutoTokenizer.from_pretrained("E:\\1-AIGC_speech_studio\Bert-VITS2\\BERT-VITS2-V1.1\\bert\\bert-base-japanese-v3")
     text = "hello,こんにちは、世界！……"
     from text.japanese_bert import get_bert_feature
 

@@ -169,3 +169,7 @@ data/*
 bert/bert-base-japanese-v3/bert-base-japanese-v3/pytorch_model.bin
 raw
 dataset
+log/character_zh_6/D_0.pth
+log/character_zh_6/DUR_0.pth
+log/character_zh_6/G_0.pth
+bert/bert-base-japanese-v3/pytorch_model.bin

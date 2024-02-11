@@ -42,6 +42,12 @@ torch.backends.cuda.enable_mem_efficient_sdp(
 torch.backends.cuda.enable_math_sdp(True)
 global_step = 0
 
+import os
+os.environ["MASTER_ADDR"] = "127.0.0.1"
+os.environ["MASTER_PORT"] = "8880"
+os.environ["WORLD_SIZE"] = "1"
+os.environ["RANK"] = "0"
+
 
 def run():
     dist.init_process_group(
@@ -191,6 +197,8 @@ def run():
                 optim_g.param_groups[0]["initial_lr"] = g_resume_lr
             if not optim_d.param_groups[0].get("initial_lr"):
                 optim_d.param_groups[0]["initial_lr"] = d_resume_lr
+            if not optim_dur_disc.param_groups[0].get("initial_lr"):
+                optim_dur_disc.param_groups[0]["initial_lr"] = dur_resume_lr
 
         epoch_str = max(epoch_str, 1)
         global_step = (epoch_str - 1) * len(train_loader)

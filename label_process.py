@@ -1,14 +1,10 @@
 import os
 
 name = [
-    ('carville', 'EN'),
-    ('dugan', 'EN'),
-    ('einstein', 'EN'),
-    ('epsilon', 'EN'),
-    ('eva', 'EN'),
+    ('character_zh_6', 'ZH'),
 ]
 
-out_file = f"filelists/red alert_out.txt"
+out_file = f"filelists/character_zh_6_out.txt"
 
 def process():
     with open(out_file, 'w', encoding="utf-8") as wf:
@@ -17,15 +13,10 @@ def process():
             ch_language = item[1]
             path = f"./raw/{ch_name}"
             files = os.listdir(path)
-            
-            # 过滤出以ch_name开头的文件
-            relevant_files = [f for f in files if f.startswith(f"{ch_name}_")]
-            relevant_files.sort()  # 对文件进行排序
-
-            for idx, f in enumerate(relevant_files, start=1):
+            for f in files:
                 if f.endswith('.lab') or f.endswith('.txt'):
                     with open(os.path.join(path, f), 'r', encoding="utf-8") as perFile:
-                        line = perFile.readline()
+                        line = perFile.readline().strip()  # 使用strip去除末尾空白字符
                         result = f"./dataset/{ch_name}/{f.split('.')[0]}.wav|{ch_name}|{ch_language}|{line}"
                         wf.write(f'{result}\n')
 
