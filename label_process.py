@@ -1,10 +1,19 @@
 import os
 
 name = [
-    ('character_zh_6', 'ZH'),
+    ('carville', 'EN'),
+    ('dugan', 'EN'),
+    ('einstein', 'EN'),
+    ('epsilon', 'EN'),
+    ('eva', 'EN'),
+    ('romanov', 'EN'),
+    ('tanya', 'EN'),
+    ('training', 'EN'),
+    ('yuri', 'EN'),
+    ('zofia', 'EN'),
 ]
 
-out_file = f"filelists/character_zh_6_out.txt"
+out_file = f"filelists/esd.list"
 
 def process():
     with open(out_file, 'w', encoding="utf-8") as wf:
