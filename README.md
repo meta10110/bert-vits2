@@ -1,4 +1,4 @@
-# Bert-VITS2
+# 源项目地址：https://github.com/fishaudio/Bert-VITS2
 
 ### 严禁将此项目用于一切违反:
 ### 《中华人民共和国宪法》，
