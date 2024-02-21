@@ -1,0 +1,39 @@
+v2.0.1 Release(CN-EN-JP multi-language) Pre-release
+紧急通知
+我们在2.0版本中发现了重大bug，该bug导致日文和英文bert被置0后训练，即失去bert效果。
+我们将重炼2.0版本底模，已经开炉的建议关炉静候
+本次我们基于1.1.1做了非常大量的更改，支持了三语言训练及混合合成。
+这是自1.0以来最大的更改，因此另起2.0大版本号。
+本版本对日语做了极大的优化，效果提升非常巨大。
+主要更新内容如下：
+1.日语bert换用deberta-large。
+2.日语g2p经过了大量修改和优化。
+（感谢 @OedoSoldier 和 @Akito-UzukiP 的贡献）
+3.新增英语支持，具体请参见新增的reference。
+4.将英语的g2p和bert稍作修改。（PR by @OedoSoldier ）
+4.新增推理向下兼容支持，只需指定版本号即可推理先前版本模型。（PR by @jiangyuxiaoxiao ）
+5.新增全局配置文件，只需修改config.yml即可控制训练流程。（PR by @jiangyuxiaoxiao ）
+6.新增WebUI合成的翻译支持（PR By @jiangyuxiaoxiao ）
+7.降低训练显存开销。
+8.修正nccl训练卡死问题。
+9.新增preprocess_text的数据集自动清洗功能。
+10.新增server_fastapi和更美观好用的前端。（请见Release附件 @jiangyuxiaoxiao )
+11.WebUI美化。 （PR By @AnyaCoder ）
+12.修正resample的运行问题。
+13.预添加emotional embedding，将在下个版本实装。
+14.新增bert和底模自动下载功能。
+15.修正音量不均衡问题。（PR By @lzyplayer )
+16.修正多机训练rank获取不正确问题。(PR By @Lvjinhong )
+
+使用到的所有bert模型和底模均可在 https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/show_model 下载
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+v2.0.2-fix
+我们修正了存在于2.0先前版本的重大bug，并且重炼了底模。
+在日语和英语性能上较2.0有较大改善。推荐使用此版本。
+此外，我们还加入了自动混合合成（auto），可以免打标进行混合语言合成。 @Artrajz
+新的WebUI加入了盲盒机制（见附件）。 @jiangyuxiaoxiao
+底模请见https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=Bert-VITS2%E4%B8%AD%E6%97%A5%E8%8B%B1%E5%BA%95%E6%A8%A1-fix
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
