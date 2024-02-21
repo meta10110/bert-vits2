@@ -1,0 +1,15 @@
+v1.1.1(CN-JP multi-language pretrain model)
+自1.1版本发布以来，我们在主分支又进行了诸多测试并进行了bug修复。
+现放出适配主分支的中-日双语言底模，可供微调使用。
+中-日底模：https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=Bert-VITS2%E4%B8%AD%E6%97%A5%E5%BA%95%E6%A8%A1
+日语bert境内分流下载：https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=bert-base-japanese-v3
+中文bert境内分流下载：https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=chinese-roberta-wwm-ext-large
+本次所做的主要调整有：
+1.修正了bert重复加载的问题，大幅提升bert生成速度。 （PR by @jiangyuxiaoxiao ）
+2.修正了webui多语言推理可能出现的问题。
+3.修正了bert_gen.py的hps未传入问题。
+4.将transformer flow层数翻倍。
+5.修正了Duration predictor 的前向激活函数
+6.添加分段合成，可以使用 | 来控制分段。
+7.GPU利用率优化。（对于新GPU）
+感谢 @leng-yue @innnky @ylzz1997 @fumiama 所作出的贡献。
