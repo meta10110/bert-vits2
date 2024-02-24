@@ -160,17 +160,10 @@ cython_debug/
 #.idea/
 
 .DS_Store
-/models
-/logs
-
 filelists/*
 !/filelists/esd.list
 data/*
-bert/bert-base-japanese-v3/pytorch_model.bin
-raw
-dataset
 configs/config.json
+*.bin
 
-*.bat
 
-5.HiyoriUI.bat
