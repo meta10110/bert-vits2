@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+workenv/*
 
 # Spyder project settings
 .spyderproject
@@ -163,6 +164,8 @@ cython_debug/
 /models
 /logs
 
+
+# custom
 filelists/*
 !/filelists/esd.list
 data/*
