@@ -556,7 +556,7 @@ def train_and_evaluate(
         grad_norm_d = commons.clip_grad_value_(net_d.parameters(), None)
         scaler.step(optim_d)
 
-        with autocast(enabled=hps.train.bf16_run, dtype=torch.float16):
+        with autocast(enabled=hps.train.bf16_run, dtype=torch.bfloat16):
             loss_slm = wl.discriminator(
                 y.detach().squeeze(), y_hat.detach().squeeze()
             ).mean()
