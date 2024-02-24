@@ -168,7 +168,6 @@ filelists/*
 data/*
 /*.yml
 !/default_config.yml
-/Web/
 /emotional/*/*.bin
 /bert/*/*.bin
 /bert/*/*.h5
@@ -178,8 +177,7 @@ data/*
 asr_transcript.py
 extract_list.py
 dataset
-/Data
 Model
-raw/
+data/*
 logs/
-Data/*
+
