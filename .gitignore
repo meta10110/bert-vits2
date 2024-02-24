@@ -165,10 +165,9 @@ cython_debug/
 
 filelists/*
 !/filelists/esd.list
-data/*
+
 /*.yml
 !/default_config.yml
-/Web/
 /emotional/*/*.bin
 /bert/*/*.bin
 /bert/*/*.h5
@@ -177,14 +176,12 @@ data/*
 /bert/*/*.msgpack
 asr_transcript.py
 extract_list.py
-dataset
-/Data
+
 Model
 raw/
 logs/
-Data/*
-1.开始预训练.bat
-2.开始训练.bat
-3.启动tensorboard.bat
-4.WebUI.bat
-5.HiyoriUI.bat
+
+
+
+
+
