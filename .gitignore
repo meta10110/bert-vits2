@@ -168,7 +168,6 @@ filelists/*
 data/*
 /*.yml
 !/default_config.yml
-/Web/
 /emotional/*/*.bin
 /slm/*/*.bin
 /bert/*/*.bin
@@ -179,11 +178,10 @@ data/*
 asr_transcript.py
 extract_list.py
 dataset
-/Data
 Model
 raw/
 logs/
 Data/*
 /onnx
 /.vs
-*.bat
+
