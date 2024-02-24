@@ -21,7 +21,7 @@ def generate_config(data_dir, batch_size):
     if os.path.isfile(config_path):
         config = json.load(open(config_path))
     else:
-        config = json.load(open("configs/config.json"))
+        config = json.load(open("configs/config.json",encoding='utf-8'))
     config["data"]["training_files"] = train_path
     config["data"]["validation_files"] = val_path
     config["train"]["batch_size"] = batch_size
